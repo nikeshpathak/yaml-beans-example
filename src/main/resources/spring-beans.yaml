@@ -1,0 +1,24 @@
+#spring-beans
+
+customerImpl:
+  class: com.example.yamlbeanExample.Customer
+  properties:
+    firstName: Rohit
+    lastName: jain
+    phone: 203428304230
+    address: ref::addressImpl
+addressImpl:
+  class: com.example.yamlbeanExample.Address
+  properties:
+    address1: gyan nagar
+    address2: sector 4
+    pinCode: 313001
+    city: pune
+    state: Maharastra
+    country: ref::countryImpl
+countryImpl:
+  class: com.example.yamlbeanExample.Country
+  properties:
+    countryName: India
+    countryCode: 91
+    currency: INR

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="customerImpl" class="com.example.yamlbeanExample.Customer">
+        <property name="firstName">
+            <value>Nikesh</value>
+        </property>
+        <property name="lastName">
+            <value>Pathak</value>
+        </property>
+        <property name="phone">
+            <value>203428304230</value>
+        </property>
+        <property name="address" ref="addressImpl"></property>
+    </bean>
+    <bean id="addressImpl" class="com.example.yamlbeanExample.Address">
+        <property name="address1">
+            <value>gyan nagar</value>
+        </property>
+        <property name="address2">
+            <value>sector 4</value>
+        </property>
+        <property name="pinCode">
+            <value>313001</value>
+        </property>
+        <property name="city">
+            <value>Pune</value>
+        </property>
+        <property name="state">
+            <value>Maharastra</value>
+        </property>
+        <property name="country" ref="countryImpl"></property>
+    </bean>
+    <bean id="countryImpl" class="com.example.yamlbeanExample.Country">
+        <property name="countryName">
+            <value>India</value>
+        </property>
+        <property name="countryCode">
+            <value>+91</value>
+        </property>
+        <property name="currency">
+            <value>INR</value>
+        </property>
+    </bean>
+</beans>

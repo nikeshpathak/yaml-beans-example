@@ -1,9 +1,9 @@
 package com.example.yamlbeanExample;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -15,11 +15,18 @@ public class YamlbeanExampleApplicationTests {
 	Customer customer;
 
 	@Test
-	public void contextLoads() {
+	public void testBeanInitialization() {
 
-		System.out.println(customer.getFirstName());
-		System.out.println(customer.getAddress().getAddress1());
-		System.out.println(customer.getAddress().getCountry().getCountryName());
+		Assert.assertNotNull(customer);
+		Assert.assertNotNull(customer.getFirstName());
+		Assert.assertNotNull(customer.getLastName());
+		Assert.assertNotNull(customer.getPhone());
+		Assert.assertNotNull(customer.getAddress());
+		Assert.assertNotNull(customer.getAddress().getAddress1());
+		Assert.assertNotNull(customer.getAddress().getAddress2());
+		Assert.assertNotNull(customer.getAddress().getCountry());
+		Assert.assertNotNull(customer.getAddress().getCountry().getCountryName());
+
 	}
 
 }

@@ -24,6 +24,6 @@ repositories {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
-	compile files('/Users/nikeshpathak/Desktop/proguard/yamlspringbeans-spring-boot-starter-0.0.1.jar')
+	compile files('libs/yamlspringbeans-spring-boot-starter-0.0.1.jar')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
